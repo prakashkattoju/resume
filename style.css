@@ -27,10 +27,29 @@ body {
 }
 .info{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(502px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
 }
-.basic-info{
-    background-color: rgba(196,196,196,0.3)
+.info > div{
+    min-height: calc(100vh - 40px);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+}
+.info .basic-info{
+    background-color: rgba(196,196,196,0.3);
+}
+.primary-info .head h2{
+    margin: 0;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #545454;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    display: inline-block;
+    min-width: 251px;
+    text-align: center
 }
