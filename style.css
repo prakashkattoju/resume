@@ -1,0 +1,24 @@
+html,
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 25.71426px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+}
+
+.page {
+    padding: 15px;
+    background: rgb(3, 56, 244);
+    background: -moz-linear-gradient(180deg, rgba(3, 56, 244, 1) 0%, rgba(224, 37, 206, 1) 94%);
+    background: -webkit-linear-gradient(180deg, rgba(3, 56, 244, 1) 0%, rgba(224, 37, 206, 1) 94%);
+    background: linear-gradient(180deg, rgba(3, 56, 244, 1) 0%, rgba(224, 37, 206, 1) 94%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0338f4", endColorstr="#e025ce", GradientType=1);
+}
