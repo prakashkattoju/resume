@@ -15,10 +15,22 @@ body {
 }
 
 .page {
-    padding: 15px;
     background: rgb(3, 56, 244);
     background: -moz-linear-gradient(180deg, rgba(3, 56, 244, 1) 0%, rgba(224, 37, 206, 1) 94%);
     background: -webkit-linear-gradient(180deg, rgba(3, 56, 244, 1) 0%, rgba(224, 37, 206, 1) 94%);
     background: linear-gradient(180deg, rgba(3, 56, 244, 1) 0%, rgba(224, 37, 206, 1) 94%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0338f4", endColorstr="#e025ce", GradientType=1);
+}
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+.basic-info{
+    background-color: rgba(196,196,196,0.3)
 }
