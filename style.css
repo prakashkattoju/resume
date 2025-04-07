@@ -14,6 +14,11 @@ body {
     text-rendering: optimizeSpeed;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .page {
     background: rgb(3, 56, 244);
     background: -moz-linear-gradient(180deg, rgba(3, 56, 244, 1) 0%, rgba(224, 37, 206, 1) 94%);
@@ -21,35 +26,108 @@ body {
     background: linear-gradient(180deg, rgba(3, 56, 244, 1) 0%, rgba(224, 37, 206, 1) 94%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0338f4", endColorstr="#e025ce", GradientType=1);
 }
-.container{
+
+.container {
     max-width: 1024px;
     margin: 0 auto;
 }
-.info{
+
+.info {
+    padding: 15px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(502px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 15px
 }
-.info > div{
-    min-height: calc(100vh - 40px);
+
+.basic-info .basic-info__block {
+    background-color: rgba(196, 196, 196, 0.3);
     border-radius: 10px;
+    padding: 15px;
+}
+.primary-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.primary-info .primary-info__block{
     background-color: #fff;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 15px;
 }
-.info .basic-info{
-    background-color: rgba(196,196,196,0.3);
+.primary-info .head{
+    position: relative;
+    margin-bottom: 1rem;
 }
-.primary-info .head h2{
+.primary-info .head::after{
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #545454;
+}
+.primary-info .head h2 {
+    position: relative;
     margin: 0;
     padding: 10px 15px;
     color: #fff;
     background-color: #545454;
     text-transform: uppercase;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 16px;
     line-height: 20px;
     display: inline-block;
-    min-width: 251px;
-    text-align: center
+    min-width: 221px;
+    text-align: center;
+    z-index: 2
+}
+.primary-info .block-list{
+    
+}
+.primary-info .block-list .item{
+    margin-bottom: 2rem
+}
+.primary-info .block-list .item:last-child{
+    margin-bottom: 0
+}
+.primary-info .block-list .item h3,
+.primary-info .block-list .item h4,
+.primary-info .block-list .item h5{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.basic-info__block {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.basic-info__block .pic {
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.basic-info__block .pic img {
+    border-radius: 5px;
+}
+
+.basic-info__block .head {
+    width: calc(100% - 230px);
+}
+
+.basic-info__block .head h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 3.5rem;
+    margin-bottom: 1rem;
+}
+.basic-info__block .head span{
+    color: #CECACA;
+    font-size: 18px;
+    line-height: 30px;
 }
