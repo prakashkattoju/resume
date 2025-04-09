@@ -5,7 +5,8 @@ body {
     padding: 0;
     width: 100%;
     height: auto;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
     font-size: 18px;
     font-weight: 500;
     font-style: normal;
@@ -14,6 +15,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeSpeed;
     color: #545454;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 a {
@@ -40,12 +50,13 @@ img {
 
 .info {
     padding: 15px;
-    /*    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 15px*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+    gap: 15px;
 }
 
 .primary-info {
+    grid-column: span 2;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -121,11 +132,13 @@ img {
 }
 
 .basic-info__block {
+/*
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
     gap: 30px;
     align-items: center;
     justify-content: flex-start;
+*/
     background-color: rgba(196, 196, 196, 0.3);
     border-radius: 10px;
     padding: 15px;
@@ -133,6 +146,9 @@ img {
 
 .basic-info__block .pic {
     border-radius: 50%;
+    max-width: 150px;
+    margin: 0 auto 1rem;
+    display: block;
 }
 
 .basic-info__block .head {
@@ -142,9 +158,9 @@ img {
 .basic-info__block .head h1 {
     margin: 0;
     color: #fff;
-    font-size: 2.15rem;
-    font-weight: 500;
-    line-height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -156,14 +172,16 @@ img {
 
 .basic-info__block .head .contact {
     display: flex;
+    flex-direction: column;
     gap: 15px;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     word-wrap: break-word;
     margin-top: 2rem;
 }
 
 .basic-info__block .head .contact a {
+    width: 100%;
     font-size: 15px;
     color: #fff;
     display: flex;
@@ -173,7 +191,9 @@ img {
     padding: 6px 10px;
     border-radius: 5px;
     background-color: rgba(196, 196, 196, .3);
+    box-sizing: border-box;
 }
-.basic-info__block .head .contact a > img{
+
+.basic-info__block .head .contact a > img {
     height: 20px
 }
