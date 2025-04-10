@@ -14,7 +14,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeSpeed;
-    color: #545454;
+    color: #272727;
 }
 
 h1,
@@ -50,9 +50,89 @@ img {
 
 .info {
     padding: 15px;
+}
+
+@media (min-width: 1024px) {
+    .info {
+        padding: 15px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+        gap: 15px;
+    }
+
+    .basic-info {
+        position: sticky;
+        top: 15px;
+        /* distance from the top of the viewport */
+        height: calc(100vh - 60px);
+    }
+}
+
+.basic-info {
+    /*
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+*/
+    background-color: rgba(196, 196, 196, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.basic-info .pic {
+    border-radius: 50%;
+    max-width: 150px;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.basic-info .head {
+    grid-column: span 4;
+}
+
+.basic-info .head h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.basic-info .head span {
+    color: #CECACA;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.basic-info .head .contact {
+    display: flex;
+    flex-direction: column;
     gap: 15px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    word-wrap: break-word;
+    margin-top: 2rem;
+}
+
+.basic-info .head .contact a {
+    width: 100%;
+    font-size: 15px;
+    color: #fff;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: rgba(196, 196, 196, .3);
+    box-sizing: border-box;
+}
+
+.basic-info .head .contact a > img {
+    height: 20px
 }
 
 .primary-info {
@@ -65,7 +145,7 @@ img {
 .primary-info .primary-info__block {
     background-color: #fff;
     border-radius: 10px;
-    padding: 15px;
+    padding: 15px
 }
 
 .primary-info .head {
@@ -80,7 +160,7 @@ img {
     left: 0;
     height: 2px;
     width: 100%;
-    background-color: #545454;
+    background-color: #272727;
 }
 
 .primary-info .head h2 {
@@ -88,7 +168,7 @@ img {
     margin: 0;
     padding: 10px 15px;
     color: #fff;
-    background-color: #545454;
+    background-color: #272727;
     text-transform: uppercase;
     border-radius: 5px;
     font-size: 16px;
@@ -119,81 +199,20 @@ img {
 }
 
 .primary-info .block-list .item h5 {
-    color: #73808D;
+    color: #565656;
 }
 
 .primary-info .block-list .item .summary {
     font-size: 16px;
     line-height: 25px;
 }
-
-.basic-info {
-    margin-bottom: 15px;
+.primary-info .block-list .item .summary ul{
+    padding-left: 15px;
 }
 
-.basic-info__block {
-/*
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
-    gap: 30px;
-    align-items: center;
-    justify-content: flex-start;
-*/
-    background-color: rgba(196, 196, 196, 0.3);
-    border-radius: 10px;
-    padding: 15px;
-}
 
-.basic-info__block .pic {
-    border-radius: 50%;
-    max-width: 150px;
-    margin: 0 auto 1rem;
-    display: block;
-}
-
-.basic-info__block .head {
-    grid-column: span 4;
-}
-
-.basic-info__block .head h1 {
-    margin: 0;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 2rem;
-    margin-bottom: 1rem;
-}
-
-.basic-info__block .head span {
-    color: #CECACA;
-    font-size: 16px;
-    line-height: 25px;
-}
-
-.basic-info__block .head .contact {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    word-wrap: break-word;
-    margin-top: 2rem;
-}
-
-.basic-info__block .head .contact a {
-    width: 100%;
-    font-size: 15px;
-    color: #fff;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 6px 10px;
-    border-radius: 5px;
-    background-color: rgba(196, 196, 196, .3);
-    box-sizing: border-box;
-}
-
-.basic-info__block .head .contact a > img {
-    height: 20px
+@media (max-width: 640px) {
+    .basic-info {
+        margin-bottom: 15px;
+    }
 }
