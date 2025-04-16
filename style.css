@@ -215,4 +215,10 @@ img {
     .basic-info {
         margin-bottom: 15px;
     }
+    .primary-info .head h2{
+        display: block
+    }
+    .primary-info .head::after{
+        content: none
+    }
 }
