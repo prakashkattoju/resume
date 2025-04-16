@@ -1,3 +1,6 @@
+<?php
+include_once('func.php');
+?>
 <html>
 
 <head>
